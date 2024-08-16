@@ -1,0 +1,260 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family:  'Josefin Sans', sans-serif;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.common {
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode {
+    background: 0 0 url(./images/bg-desktop-dark.jpg) no-repeat;
+    background-size: 100%;
+    background-color: hsl(235, 21%, 11%);
+    color: hsl(234, 39%, 85%);
+}
+
+.light-mode {
+    background: 0 0 url(./images/bg-desktop-light.jpg) no-repeat;
+    background-size: 100%;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(236, 9%, 61%);
+}
+
+.light-mode .content, .light-mode .bottom, .light-mode .addTodo, .light-mode #addtodo{
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+@media screen and (max-width: 480px) {
+    .light-mode{
+        background-color: hsl(0, 0%, 98%);
+        background-size: 100% !important;
+        color: hsl(236, 9%, 61%);
+        background: 0 0 url(./images/bg-mobile-light.jpg) no-repeat;
+
+    }
+
+    .dark-mode{
+        background-color: hsl(235, 21%, 11%) !important;
+        background-size: 100% !important;
+        color: hsl(236, 9%, 61%);
+        background: 0 0 url(./images/bg-mobile-dark.jpg) no-repeat;
+
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .theme-icon{
+        margin-right: 50px;
+    }
+
+}
+body {
+    background-size: contain;
+}
+
+header, main {
+    max-width: 545px;
+    margin: 0 auto;
+}
+
+header {
+    justify-content: space-between;
+    padding: 52px 0 11px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #fff;
+    letter-spacing: 1rem;
+}
+
+.theme-icon {
+    margin-top: -10px;
+}
+
+.theme-icon #theme {
+    display: none;
+}
+
+#theme + label::before {
+    content: '';
+    background: url(./images/icon-sun.svg);
+    display: block;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+#theme:checked + label::before {
+    background: url(./images/icon-moon.svg);
+}
+
+.addTodo {
+    background-color: hsl(235, 24%, 19%);
+    height: 65px;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    padding-left: 26px;
+    position: relative;
+}
+
+.addTodo #addtodo {
+    background: transparent;
+    color: hsl(234, 39%, 85%);
+    border: 0;
+    outline: 0;
+    margin-left: 45px;
+    width: calc(100% - 47px);
+    height: 50px;
+    margin-top: 4px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.addTodo span {
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgb(210, 206, 206);
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+    top: 21px;
+    cursor: pointer;
+}
+
+.addTodo span:hover {
+    background: center url(./images/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.content {
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 5px;
+    box-shadow: 0 42px 30px -9px hsl(235, 21%, 11%);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 0 10px;
+    min-height: 65px;
+    border-bottom: 1px solid hsl(234, 39%, 85%);
+    position: relative;
+}
+
+ul li input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+ul li label {
+    cursor: pointer;
+    padding-left: 48px;
+    font-size: 1.1rem;
+}
+
+.checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid hsl(234, 39%, 85%);
+    border-radius: 50%;
+}
+
+.checkmark{
+    margin-top: 25px;
+    margin-left: 15px
+}
+
+/* ul li input[type="checkbox"] ~ .checkmark:hover {
+} */
+
+ul li input[type="checkbox"]:checked ~ .checkmark {
+    background: center url(./images/icon-check.svg) no-repeat, linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+ul li input[type="checkbox"]:checked ~ .text {
+    text-decoration: line-through;
+}
+
+.remove {
+    background: url(./images/icon-cross.svg) no-repeat;
+    width: 18px;
+    height: 18px;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+ul li:hover .remove {
+    display: block;
+}
+
+.left {
+    margin-right: 86px;
+}
+
+.bottom {
+    padding: 20px;
+    font-size: 0.68rem;
+    border-radius: 5px;
+    background-color: hsl(235, 24%, 19%);
+}
+
+.filter {
+    margin-right: 47px;
+}
+
+.filter input[type="radio"] {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+
+.filter label {
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.filter input[type="radio"]:checked ~ span {
+    color: hsl(234, 73%, 56%);
+}
+
+.clear {
+    color: gray;
+    cursor: pointer;
+}
+
+.clear:hover {
+    color: #fff;
+}

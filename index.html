@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <header class="common">
+        <h1>TODO</h1>
+        <div class="theme-icon">
+            <input type="checkbox" name="theme" id="theme">
+            <label for="theme"></label>
+        </div>
+    </header>
+    <main>
+        <form id="todoForm">
+            <div class="addTodo common">
+                <span class="sora"></span>
+                <input type="text" placeholder="Create new todo..." name="addItem" id="addtodo">
+            </div>
+        </form>
+        <section class="content">
+            <ul id ="toDoList">
+            </ul>
+        </section>
+    <div class="bottom common">
+        <div class="left"><span id="listCount"></span> items left</div>
+        <div class="filter common">
+            <label>
+                <input type="radio" name="on" id="all" checked>
+                <span>All</span>
+            </label>
+            <label>
+                <input type="radio" name="on" id="active">
+                <span>Active</span>
+            </label>
+            <label>
+                <input type="radio" name="on" id="completed">
+                <span>Completed</span>
+            </label>
+        </div>
+        <span class="clear">Clear Completed</span>
+    </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
