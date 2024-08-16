@@ -17,4 +17,6 @@ Light Mode
 
 ![image](https://github.com/user-attachments/assets/b3737a15-f353-4e8a-97c9-074ee6bce934)
 
-Feel free to delve into each feature and see the ultimate functionality of the application!
+Feel free to delve into each feature and see the ultimate functionality of the [TODO LIST](https://todolistnet.netlify.app/) application!
+
+
